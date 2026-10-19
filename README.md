@@ -28,7 +28,7 @@ cd SlientBrisge
 pip install -r requirements.txt 
 ```
 
-## Using:
+## Classic Using:
 ```bash
 ./silentbridge --create-bridge  --upstream <Switch> --phy <legitimate Device> --sidechannel <Wi-Fi>
 
@@ -37,4 +37,13 @@ pip install -r requirements.txt
 ```bash
 ./silentbridge --add-interaction --gw-mac <Default GateWay MAC> --client-ip <legitimate device IP> --upstream eno1 --client-mac <legitimate device mac> --phy eno2 --switch-mac <switch mac> --sidechannel eno3
 
+```
+
+## Rouge RADIOS:
+```bash
+./silentbridge --cert-wizard
+```
+
+```bash
+./silentbridge --rogue-gateway --upstream eno1 --client-mac <legitimate device mac> --phy eno2 --switch-mac <switch mac> --netmask 255.255.255.0 --gw-ip 192.168.1.1
 ```
